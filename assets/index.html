@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Widi Assiddiqy — Photographer & Designer</title>
+<meta name="description" content="Portfolio of Muhammad Widi Assiddiqy — Photographer, 3D Designer and Woodworker based in Tangerang, Indonesia.">
+<style>
+  :root{
+    --bg:#fafaf7;
+    --ink:#161613;
+    --muted:#7a7a72;
+    --line:#e4e4dc;
+    --accent:#161613;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;width:100%;height:100%;object-fit:cover}
+  a{color:inherit;text-decoration:none}
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;justify-content:space-between;align-items:center;
+    padding:1.4rem 4vw;
+    background:rgba(250,250,247,.85);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .logo{font-weight:700;letter-spacing:.14em;font-size:.85rem;text-transform:uppercase}
+  nav{display:flex;gap:2.2rem}
+  nav a{
+    font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
+    transition:color .25s;
+  }
+  nav a:hover{color:var(--ink)}
+  @media(max-width:640px){nav a:not(:last-child){display:none}}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    align-items:center;
+    gap:4vw;
+    padding:8rem 4vw 4rem;
+  }
+  .hero h1{
+    font-size:clamp(2.6rem,6vw,5.2rem);
+    line-height:1.05;
+    font-weight:700;
+    letter-spacing:-.02em;
+  }
+  .hero h1 span{display:block;color:var(--muted);font-weight:400}
+  .hero p{
+    max-width:34ch;margin-top:1.6rem;color:var(--muted);font-size:1.05rem;
+  }
+  .hero-cta{
+    display:inline-block;margin-top:2.2rem;
+    padding:.85rem 2.2rem;
+    border:1px solid var(--ink);
+    font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+    transition:background .25s,color .25s;
+  }
+  .hero-cta:hover{background:var(--ink);color:var(--bg)}
+  .hero-img{
+    aspect-ratio:4/5;
+    max-height:70vh;
+    overflow:hidden;
+    filter:grayscale(1) contrast(1.05);
+  }
+  @media(max-width:820px){
+    .hero{grid-template-columns:1fr;min-height:auto;padding-top:7rem}
+    .hero-img{max-height:55vh}
+  }
+
+  /* ---------- Section shell ---------- */
+  section{padding:6rem 4vw;border-top:1px solid var(--line)}
+  .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
+  .sec-head h2{font-size:.85rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
+  .sec-head .num{font-size:.85rem;letter-spacing:.28em;color:var(--muted)}
+
+  /* ---------- About ---------- */
+  .about{display:grid;grid-template-columns:1fr 1.6fr;gap:4vw;align-items:start}
+  .about p{font-size:1.35rem;line-height:1.5;max-width:44ch}
+  .about .meta{margin-top:2.4rem;display:grid;gap:.9rem}
+  .about .meta div{display:flex;justify-content:space-between;max-width:420px;border-bottom:1px solid var(--line);padding-bottom:.6rem}
+  .about .meta dt{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+  .about .meta dd{font-size:.9rem}
+  @media(max-width:820px){.about{grid-template-columns:1fr}}
+
+  /* ---------- Filters ---------- */
+  .filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.6rem}
+  .filters button{
+    background:none;border:1px solid var(--line);color:var(--muted);
+    padding:.55rem 1.3rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
+    cursor:pointer;border-radius:999px;transition:all .25s;font-family:inherit;
+  }
+  .filters button.active,.filters button:hover{border-color:var(--ink);color:var(--ink)}
+  .filters button.active{background:var(--ink);color:var(--bg)}
+
+  /* ---------- Grid ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:2px;
+    background:var(--line);
+  }
+  .card{
+    position:relative;overflow:hidden;cursor:pointer;
+    background:var(--bg);
+    aspect-ratio:4/3;
+  }
+  .card.tall{grid-row:span 2;aspect-ratio:auto}
+  .card img{
+    transition:transform .8s cubic-bezier(.19,1,.22,1),filter .5s;
+  }
+  .card:hover img{transform:scale(1.045)}
+  .card .info{
+    position:absolute;left:0;right:0;bottom:0;
+    padding:1.2rem 1.4rem;
+    background:linear-gradient(to top,rgba(0,0,0,.72),transparent);
+    color:#fff;
+    opacity:0;transform:translateY(8px);
+    transition:opacity .4s,transform .4s;
+    pointer-events:none;
+  }
+  .card:hover .info{opacity:1;transform:translateY(0)}
+  .card .info h3{font-size:.95rem;font-weight:600;letter-spacing:.02em}
+  .card .info p{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-top:.2rem}
+  @media(max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.grid{grid-template-columns:1fr}.card.tall{grid-row:auto;aspect-ratio:4/3}}
+
+  /* ---------- Lightbox ---------- */
+  .lightbox{
+    position:fixed;inset:0;z-index:200;
+    background:rgba(12,12,10,.94);
+    display:none;align-items:center;justify-content:center;
+    padding:4vw;cursor:zoom-out;
+  }
+  .lightbox.open{display:flex}
+  .lightbox figure{max-width:88vw;max-height:86vh}
+  .lightbox img{max-width:88vw;max-height:78vh;object-fit:contain}
+  .lightbox figcaption{color:#ccc;margin-top:1rem;font-size:.85rem;letter-spacing:.06em;display:flex;justify-content:space-between;gap:1rem}
+  .lightbox figcaption span:last-child{opacity:.6}
+
+  /* ---------- Contact ---------- */
+  .contact{text-align:center;padding-bottom:8rem}
+  .contact h2{font-size:clamp(2.2rem,5.5vw,4.4rem);line-height:1.08;letter-spacing:-.02em}
+  .contact h2 em{font-style:normal;color:var(--muted)}
+  .contact-links{
+    margin-top:3rem;display:flex;justify-content:center;gap:2.4rem;flex-wrap:wrap;
+  }
+  .contact-links a{
+    font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
+    border-bottom:1px solid var(--ink);padding-bottom:.25rem;
+    transition:opacity .25s;
+  }
+  .contact-links a:hover{opacity:.45}
+
+  footer{
+    display:flex;justify-content:space-between;flex-wrap:gap;gap:1rem;
+    padding:1.6rem 4vw;border-top:1px solid var(--line);
+    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#top">Widi Assiddiqy</a>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#works">Works</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div>
+    <h1>Muhammad Widi<br>Assiddiqy<span>Photographer & Designer</span></h1>
+    <p>Visual storyteller and multidisciplinary designer based in Tangerang, Indonesia — capturing light, shaping space, and building with wood.</p>
+    <a class="hero-cta" href="#works">View Selected Works</a>
+  </div>
+  <div class="hero-img">
+    <img src="assets/portrait.jpg" alt="Portrait of Muhammad Widi Assiddiqy">
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-head"><h2>About</h2><span class="num">01</span></div>
+  <div class="about">
+    <p>I turn everyday moments and raw materials into meaningful visual experiences — from photography and 3D design to large-scale wood installations.</p>
+    <div>
+      <dl class="meta">
+        <div><dt>Disciplines</dt><dd>Photography · 3D Design · Woodworking</dd></div>
+        <div><dt>Based in</dt><dd>Tangerang, Banten — Indonesia</dd></div>
+        <div><dt>Availability</dt><dd>Open for international collaboration</dd></div>
+        <div><dt>Languages</dt><dd>Indonesian · English</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- WORKS -->
+<section id="works">
+  <div class="sec-head"><h2>Selected Works</h2><span class="num">02</span></div>
+
+  <div class="filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="photo">Photography</button>
+    <button data-filter="3d">3D Design</button>
+    <button data-filter="wood">Woodworking</button>
+  </div>
+
+  <div class="grid" id="grid">
+
+    <!-- Photography -->
+    <div class="card tall" data-cat="photo" data-title="Together We Reach" data-sub="Documentary · Bogor, 2021">
+      <img src="assets/together-we-reach.jpg" alt="Together We Reach"><div class="info"><h3>Together We Reach</h3><p>Documentary · Bogor, 2021</p></div>
+    </div>
+    <div class="card" data-cat="photo" data-title="Solitary" data-sub="Fine Art · Bogor, 2021">
+      <img src="assets/solitary.jpg" alt="Solitary"><div class="info"><h3>Solitary</h3><p>Fine Art · Bogor, 2021</p></div>
+    </div>
+    <div class="card" data-cat="photo" data-title="Enjoying the Steel Horse" data-sub="Street · Jakarta, 2021">
+      <img src="assets/steel-horse.jpg" alt="Enjoying the Steel Horse"><div class="info"><h3>Enjoying the Steel Horse</h3><p>Street · Jakarta, 2021</p></div>
+    </div>
+    <div class="card" data-cat="photo" data-title="Batik Komar — The Process" data-sub="Craft · Bandung, 2023">
+      <img src="assets/batik-process.jpg" alt="Batik Komar"><div class="info"><h3>Batik Komar — The Process</h3><p>Craft · Bandung, 2023</p></div>
+    </div>
+    <div class="card tall" data-cat="photo" data-title="Batik Komar — Dyeing" data-sub="Craft · Bandung, 2023">
+      <img src="assets/batik-dyeing.jpg" alt="Batik dyeing"><div class="info"><h3>Batik Komar — Dyeing</h3><p>Craft · Bandung, 2023</p></div>
+    </div>
+    <div class="card" data-cat="photo" data-title="Cyclists of Jogja" data-sub="Street · Yogyakarta, 2021">
+      <img src="assets/cyclists-jogja.jpg" alt="Cyclists of Jogja"><div class="info"><h3>Cyclists of Jogja</h3><p>Street · Yogyakarta, 2021</p></div>
+    </div>
+    <div class="card" data-cat="photo" data-title="Hugo Boss — Product Study" data-sub="Product · Jakarta, 2024">
+      <img src="assets/hugo-boss.jpg" alt="Product study"><div class="info"><h3>Hugo Boss — Product Study</h3><p>Product · Jakarta, 2024</p></div>
+    </div>
+    <div class="card" data-cat="photo" data-title="Jaysnack — Brand Photography" data-sub="Commercial · Jakarta, 2025">
+      <img src="assets/jaysnack.jpg" alt="Jaysnack"><div class="info"><h3>Jaysnack — Brand Photography</h3><p>Commercial · Jakarta, 2025</p></div>
+    </div>
+    <div class="card tall" data-cat="photo" data-title="The Mesmerizing Gaze" data-sub="Portrait · Jakarta, 2024">
+      <img src="assets/mesmerizing-gaze.jpg" alt="Portrait"><div class="info"><h3>The Mesmerizing Gaze</h3><p>Portrait · Jakarta, 2024</p></div>
+    </div>
+    <div class="card" data-cat="photo" data-title="Confused" data-sub="Portrait · Jakarta, 2024">
+      <img src="assets/confused.jpg" alt="Confused portrait"><div class="info"><h3>Confused</h3><p>Portrait · Jakarta, 2024</p></div>
+    </div>
+    <div class="card" data-cat="photo" data-title="Like a King" data-sub="Conceptual · Jakarta, 2026">
+      <img src="assets/like-a-king.jpg" alt="Like a King"><div class="info"><h3>Like a King</h3><p>Conceptual · Jakarta, 2026</p></div>
+    </div>
+    <div class="card" data-cat="photo" data-title="Golden Hour — Jogja" data-sub="Street · Yogyakarta, 2025">
+      <img src="assets/golden-hour.jpg" alt="Golden hour"><div class="info"><h3>Golden Hour — Jogja</h3><p>Street · Yogyakarta, 2025</p></div>
+    </div>
+
+    <!-- 3D Design -->
+    <div class="card" data-cat="3d" data-title="Dolphin Flask" data-sub="Product Design · 3D">
+      <img src="assets/dolphin-flask.jpg" alt="Dolphin flask 3D"><div class="info"><h3>Dolphin Flask</h3><p>Product Design · 3D</p></div>
+    </div>
+    <div class="card" data-cat="3d" data-title="Exhibition Stand — Type A" data-sub="Spatial Design · 3D">
+      <img src="assets/stand-a.jpg" alt="Exhibition stand 1"><div class="info"><h3>Exhibition Stand — Type A</h3><p>Spatial Design · 3D</p></div>
+    </div>
+    <div class="card" data-cat="3d" data-title="Exhibition Stand — Type B" data-sub="Spatial Design · 3D">
+      <img src="assets/stand-b.jpg" alt="Exhibition stand 2"><div class="info"><h3>Exhibition Stand — Type B</h3><p>Spatial Design · 3D</p></div>
+    </div>
+    <div class="card" data-cat="3d" data-title="Street Food Cart" data-sub="Product Design · 3D">
+      <img src="assets/food-cart.jpg" alt="Food cart"><div class="info"><h3>Street Food Cart</h3><p>Product Design · 3D</p></div>
+    </div>
+    <div class="card" data-cat="3d" data-title="Sweet Potato Chips Packaging" data-sub="Packaging Design · 3D">
+      <img src="assets/keripik-ubi.jpg" alt="Sweet potato chips packaging"><div class="info"><h3>Sweet Potato Chips Packaging</h3><p>Packaging Design · 3D</p></div>
+    </div>
+    <div class="card" data-cat="3d" data-title="Lampshade — Slatted" data-sub="Lighting Design · 3D">
+      <img src="assets/lampshade.jpg" alt="Lampshade"><div class="info"><h3>Lampshade — Slatted</h3><p>Lighting Design · 3D</p></div>
+    </div>
+    <div class="card" data-cat="3d" data-title="Starling Cart" data-sub="Product Design · 3D">
+      <img src="assets/starling-cart.jpg" alt="Starling cart"><div class="info"><h3>Starling Cart</h3><p>Product Design · 3D</p></div>
+    </div>
+    <div class="card" data-cat="3d" data-title="Wayang Rack" data-sub="Furniture Design · 3D">
+      <img src="assets/rak-wayang.jpg" alt="Wayang rack"><div class="info"><h3>Wayang Rack</h3><p>Furniture Design · 3D</p></div>
+    </div>
+
+    <!-- Woodworking -->
+    <div class="card" data-cat="wood" data-title="Robot Statue — Mercubuana 40th" data-sub="Installation · 4.92 m, 2025">
+      <img src="assets/robot-statue.jpg" alt="Robot statue"><div class="info"><h3>Robot Statue — Mercubuana 40th</h3><p>Installation · 4.92 m, 2025</p></div>
+    </div>
+    <div class="card" data-cat="wood" data-title="Open House Stage — Mercubuana" data-sub="Stage Design · 2025">
+      <img src="assets/stage.jpg" alt="Open house stage"><div class="info"><h3>Open House Stage — Mercubuana</h3><p>Stage Design · 2025</p></div>
+    </div>
+    <div class="card" data-cat="wood" data-title="Open House Decor — Mercubuana" data-sub="Stage Design · 2025">
+      <img src="assets/stage-decor.jpg" alt="Open house decor"><div class="info"><h3>Open House Decor — Mercubuana</h3><p>Stage Design · 2025</p></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <figure>
+    <img id="lb-img" src="" alt="">
+    <figcaption><span id="lb-title"></span><span id="lb-sub"></span></figcaption>
+  </figure>
+</div>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <div class="sec-head" style="justify-content:center"><h2>Contact</h2><span class="num">03</span></div>
+  <h2>Let's create something<br><em>worth remembering.</em></h2>
+  <div class="contact-links">
+    <a href="mailto:aassiddiqy.widi@gmail.com">Email</a>
+    <a href="https://instagram.com/wiidii.a" target="_blank" rel="noopener">Instagram</a>
+    <a href="tel:+6285155136911">WhatsApp / Phone</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Muhammad Widi Assiddiqy</span>
+  <span>Tangerang, Banten — Indonesia</span>
+</footer>
+
+<script>
+  // Filter
+  const buttons = document.querySelectorAll('.filters button');
+  const cards = document.querySelectorAll('.card');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c => {
+        const show = f === 'all' || c.dataset.cat === f;
+        c.style.display = show ? '' : 'none';
+      });
+    });
+  });
+
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbTitle = document.getElementById('lb-title');
+  const lbSub = document.getElementById('lb-sub');
+  cards.forEach(c => {
+    c.addEventListener('click', () => {
+      lbImg.src = c.querySelector('img').src;
+      lbImg.alt = c.dataset.title;
+      lbTitle.textContent = c.dataset.title;
+      lbSub.textContent = c.dataset.sub;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  lb.addEventListener('click', () => {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') { lb.classList.remove('open'); document.body.style.overflow = ''; }
+  });
+</script>
+
+</body>
+</html>
