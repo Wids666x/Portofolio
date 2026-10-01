@@ -1,0 +1,183 @@
+{
+  "sections": [
+    {
+      "id": "photo",
+      "title": "Photography",
+      "works": [
+        {
+          "id": "w1",
+          "title": "Together We Reach",
+          "sub": "Documentary · Bogor, 2021",
+          "img": "assets/together-we-reach.jpg",
+          "tall": true
+        },
+        {
+          "id": "w2",
+          "title": "Solitary",
+          "sub": "Fine Art · Bogor, 2021",
+          "img": "assets/solitary.jpg",
+          "tall": false
+        },
+        {
+          "id": "w3",
+          "title": "Enjoying the Steel Horse",
+          "sub": "Street · Jakarta, 2021",
+          "img": "assets/steel-horse.jpg",
+          "tall": false
+        },
+        {
+          "id": "w4",
+          "title": "Batik Komar — The Process",
+          "sub": "Craft · Bandung, 2023",
+          "img": "assets/batik-process.jpg",
+          "tall": false
+        },
+        {
+          "id": "w5",
+          "title": "Batik Komar — Dyeing",
+          "sub": "Craft · Bandung, 2023",
+          "img": "assets/batik-dyeing.jpg",
+          "tall": true
+        },
+        {
+          "id": "w6",
+          "title": "Cyclists of Jogja",
+          "sub": "Street · Yogyakarta, 2021",
+          "img": "assets/cyclists-jogja.jpg",
+          "tall": false
+        },
+        {
+          "id": "w7",
+          "title": "Hugo Boss — Product Study",
+          "sub": "Product · Jakarta, 2024",
+          "img": "assets/hugo-boss.jpg",
+          "tall": false
+        },
+        {
+          "id": "w8",
+          "title": "Jaysnack — Brand Photography",
+          "sub": "Commercial · Jakarta, 2025",
+          "img": "assets/jaysnack.jpg",
+          "tall": false
+        },
+        {
+          "id": "w9",
+          "title": "The Mesmerizing Gaze",
+          "sub": "Portrait · Jakarta, 2024",
+          "img": "assets/mesmerizing-gaze.jpg",
+          "tall": true
+        },
+        {
+          "id": "w10",
+          "title": "Confused",
+          "sub": "Portrait · Jakarta, 2024",
+          "img": "assets/confused.jpg",
+          "tall": false
+        },
+        {
+          "id": "w11",
+          "title": "Like a King",
+          "sub": "Conceptual · Jakarta, 2026",
+          "img": "assets/like-a-king.jpg",
+          "tall": false
+        },
+        {
+          "id": "w12",
+          "title": "Golden Hour — Jogja",
+          "sub": "Street · Yogyakarta, 2025",
+          "img": "assets/golden-hour.jpg",
+          "tall": false
+        }
+      ]
+    },
+    {
+      "id": "3d",
+      "title": "3D Design",
+      "works": [
+        {
+          "id": "w13",
+          "title": "Dolphin Flask",
+          "sub": "Product Design · 3D",
+          "img": "assets/dolphin-flask.jpg",
+          "tall": false
+        },
+        {
+          "id": "w14",
+          "title": "Exhibition Stand — Type A",
+          "sub": "Spatial Design · 3D",
+          "img": "assets/stand-a.jpg",
+          "tall": false
+        },
+        {
+          "id": "w15",
+          "title": "Exhibition Stand — Type B",
+          "sub": "Spatial Design · 3D",
+          "img": "assets/stand-b.jpg",
+          "tall": false
+        },
+        {
+          "id": "w16",
+          "title": "Street Food Cart",
+          "sub": "Product Design · 3D",
+          "img": "assets/food-cart.jpg",
+          "tall": false
+        },
+        {
+          "id": "w17",
+          "title": "Sweet Potato Chips Packaging",
+          "sub": "Packaging Design · 3D",
+          "img": "assets/keripik-ubi.jpg",
+          "tall": false
+        },
+        {
+          "id": "w18",
+          "title": "Lampshade — Slatted",
+          "sub": "Lighting Design · 3D",
+          "img": "assets/lampshade.jpg",
+          "tall": false
+        },
+        {
+          "id": "w19",
+          "title": "Starling Cart",
+          "sub": "Product Design · 3D",
+          "img": "assets/starling-cart.jpg",
+          "tall": false
+        },
+        {
+          "id": "w20",
+          "title": "Wayang Rack",
+          "sub": "Furniture Design · 3D",
+          "img": "assets/rak-wayang.jpg",
+          "tall": false
+        }
+      ]
+    },
+    {
+      "id": "wood",
+      "title": "Woodworking",
+      "works": [
+        {
+          "id": "w21",
+          "title": "Robot Statue — Mercubuana 40th",
+          "sub": "Installation · 4.92 m, 2025",
+          "img": "assets/robot-statue.jpg",
+          "tall": false
+        },
+        {
+          "id": "w22",
+          "title": "Open House Stage — Mercubuana",
+          "sub": "Stage Design · 2025",
+          "img": "assets/stage.jpg",
+          "tall": false
+        },
+        {
+          "id": "w23",
+          "title": "Open House Decor — Mercubuana",
+          "sub": "Stage Design · 2025",
+          "img": "assets/stage-decor.jpg",
+          "tall": false
+        }
+      ]
+    }
+  ]
+}

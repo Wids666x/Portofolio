@@ -170,6 +170,7 @@
     padding:1.6rem 4vw;border-top:1px solid var(--line);
     font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
   }
+  .owner-pill{position:fixed;right:14px;bottom:14px;z-index:150;background:#161613;color:#fafaf7;border:0;padding:.55rem 1rem;font:inherit;font-size:.75rem;letter-spacing:.14em;cursor:pointer}
 </style>
 </head>
 <body>
@@ -191,7 +192,7 @@
     <a class="hero-cta" href="#works">View Selected Works</a>
   </div>
   <div class="hero-img">
-    <img src="assets/p2_i0.jpg" alt="Portrait of Muhammad Widi Assiddiqy">
+    <img src="assets/portrait.jpg" alt="Portrait of Muhammad Widi Assiddiqy">
   </div>
 </div>
 
@@ -215,85 +216,8 @@
 <section id="works">
   <div class="sec-head"><h2>Selected Works</h2><span class="num">02</span></div>
 
-  <div class="filters">
-    <button class="active" data-filter="all">All</button>
-    <button data-filter="photo">Photography</button>
-    <button data-filter="3d">3D Design</button>
-    <button data-filter="wood">Woodworking</button>
-  </div>
-
-  <div class="grid" id="grid">
-
-    <!-- Photography -->
-    <div class="card tall" data-cat="photo" data-title="Together We Reach" data-sub="Documentary · Bogor, 2021">
-      <img src="assets/p5_i0.jpg" alt="Together We Reach"><div class="info"><h3>Together We Reach</h3><p>Documentary · Bogor, 2021</p></div>
-    </div>
-    <div class="card" data-cat="photo" data-title="Solitary" data-sub="Fine Art · Bogor, 2021">
-      <img src="assets/p6_i0.jpg" alt="Solitary"><div class="info"><h3>Solitary</h3><p>Fine Art · Bogor, 2021</p></div>
-    </div>
-    <div class="card" data-cat="photo" data-title="Enjoying the Steel Horse" data-sub="Street · Jakarta, 2021">
-      <img src="assets/p7_i0.jpg" alt="Enjoying the Steel Horse"><div class="info"><h3>Enjoying the Steel Horse</h3><p>Street · Jakarta, 2021</p></div>
-    </div>
-    <div class="card" data-cat="photo" data-title="Batik Komar — The Process" data-sub="Craft · Bandung, 2023">
-      <img src="assets/p8_i0.jpg" alt="Batik Komar"><div class="info"><h3>Batik Komar — The Process</h3><p>Craft · Bandung, 2023</p></div>
-    </div>
-    <div class="card tall" data-cat="photo" data-title="Batik Komar — Dyeing" data-sub="Craft · Bandung, 2023">
-      <img src="assets/p9_i0.jpg" alt="Batik dyeing"><div class="info"><h3>Batik Komar — Dyeing</h3><p>Craft · Bandung, 2023</p></div>
-    </div>
-    <div class="card" data-cat="photo" data-title="Cyclists of Jogja" data-sub="Street · Yogyakarta, 2021">
-      <img src="assets/p10_i0.jpg" alt="Cyclists of Jogja"><div class="info"><h3>Cyclists of Jogja</h3><p>Street · Yogyakarta, 2021</p></div>
-    </div>
-    <div class="card" data-cat="photo" data-title="Hugo Boss — Product Study" data-sub="Product · Jakarta, 2024">
-      <img src="assets/p11_i0.jpg" alt="Product study"><div class="info"><h3>Hugo Boss — Product Study</h3><p>Product · Jakarta, 2024</p></div>
-    </div>
-    <div class="card" data-cat="photo" data-title="Jaysnack — Brand Photography" data-sub="Commercial · Jakarta, 2025">
-      <img src="assets/p12_i0.jpg" alt="Jaysnack"><div class="info"><h3>Jaysnack — Brand Photography</h3><p>Commercial · Jakarta, 2025</p></div>
-    </div>
-    <div class="card tall" data-cat="photo" data-title="The Mesmerizing Gaze" data-sub="Portrait · Jakarta, 2024">
-      <img src="assets/p13_i0.jpg" alt="Portrait"><div class="info"><h3>The Mesmerizing Gaze</h3><p>Portrait · Jakarta, 2024</p></div>
-    </div>
-    <div class="card" data-cat="photo" data-title="Confused" data-sub="Portrait · Jakarta, 2024">
-      <img src="assets/p14_i0.jpg" alt="Confused portrait"><div class="info"><h3>Confused</h3><p>Portrait · Jakarta, 2024</p></div>
-    </div>
-    <div class="card" data-cat="photo" data-title="Like a King" data-sub="Conceptual · Jakarta, 2026">
-      <img src="assets/p15_i0.jpg" alt="Like a King"><div class="info"><h3>Like a King</h3><p>Conceptual · Jakarta, 2026</p></div>
-    </div>
-    <div class="card" data-cat="photo" data-title="Golden Hour — Jogja" data-sub="Street · Yogyakarta, 2025">
-      <img src="assets/p16_i0.jpg" alt="Golden hour"><div class="info"><h3>Golden Hour — Jogja</h3><p>Street · Yogyakarta, 2025</p></div>
-    </div>
-
-    <!-- 3D Design -->
-    <div class="card" data-cat="3d" data-title="Dolphin Flask" data-sub="Product Design · 3D">
-      <img src="assets/p18_i0.jpg" alt="Dolphin flask 3D"><div class="info"><h3>Dolphin Flask</h3><p>Product Design · 3D</p></div>
-    </div>
-    <div class="card" data-cat="3d" data-title="Exhibition Stand — Type A" data-sub="Spatial Design · 3D">
-      <img src="assets/p19_i0.jpg" alt="Exhibition stand 1"><div class="info"><h3>Exhibition Stand — Type A</h3><p>Spatial Design · 3D</p></div>
-    </div>
-    <div class="card" data-cat="3d" data-title="Exhibition Stand — Type B" data-sub="Spatial Design · 3D">
-      <img src="assets/p20_i0.jpg" alt="Exhibition stand 2"><div class="info"><h3>Exhibition Stand — Type B</h3><p>Spatial Design · 3D</p></div>
-    </div>
-    <div class="card" data-cat="3d" data-title="Street Food Cart" data-sub="Product Design · 3D">
-      <img src="assets/p21_i0.jpg" alt="Food cart"><div class="info"><h3>Street Food Cart</h3><p>Product Design · 3D</p></div>
-    </div>
-    <div class="card" data-cat="3d" data-title="Starling Cart" data-sub="Product Design · 3D">
-      <img src="assets/p22_i0.jpg" alt="Starling cart"><div class="info"><h3>Starling Cart</h3><p>Product Design · 3D</p></div>
-    </div>
-    <div class="card" data-cat="3d" data-title="Lampshade — Slatted" data-sub="Lighting Design · 3D">
-      <img src="assets/p24_i0.jpg" alt="Lampshade"><div class="info"><h3>Lampshade — Slatted</h3><p>Lighting Design · 3D</p></div>
-    </div>
-
-    <!-- Woodworking -->
-    <div class="card" data-cat="wood" data-title="Robot Statue — Mercubuana 40th" data-sub="Installation · 4.92 m, 2025">
-      <img src="assets/p26_i0.jpg" alt="Robot statue"><div class="info"><h3>Robot Statue — Mercubuana 40th</h3><p>Installation · 4.92 m, 2025</p></div>
-    </div>
-    <div class="card" data-cat="wood" data-title="Open House Stage — Mercubuana" data-sub="Stage Design · 2025">
-      <img src="assets/p27_i0.jpg" alt="Open house stage"><div class="info"><h3>Open House Stage — Mercubuana</h3><p>Stage Design · 2025</p></div>
-    </div>
-    <div class="card" data-cat="wood" data-title="Open House Decor — Mercubuana" data-sub="Stage Design · 2025">
-      <img src="assets/p28_i0.jpg" alt="Open house decor"><div class="info"><h3>Open House Decor — Mercubuana</h3><p>Stage Design · 2025</p></div>
-    </div>
-
-  </div>
+  <div class="filters" id="filters"></div>
+  <div class="grid" id="grid"></div>
 </section>
 
 <!-- Lightbox -->
@@ -320,44 +244,30 @@
   <span>Tangerang, Banten — Indonesia</span>
 </footer>
 
+<script id="seed" type="application/json">{"sections": [{"id": "photo", "title": "Photography", "works": [{"id": "w1", "title": "Together We Reach", "sub": "Documentary · Bogor, 2021", "img": "assets/together-we-reach.jpg", "tall": true}, {"id": "w2", "title": "Solitary", "sub": "Fine Art · Bogor, 2021", "img": "assets/solitary.jpg", "tall": false}, {"id": "w3", "title": "Enjoying the Steel Horse", "sub": "Street · Jakarta, 2021", "img": "assets/steel-horse.jpg", "tall": false}, {"id": "w4", "title": "Batik Komar — The Process", "sub": "Craft · Bandung, 2023", "img": "assets/batik-process.jpg", "tall": false}, {"id": "w5", "title": "Batik Komar — Dyeing", "sub": "Craft · Bandung, 2023", "img": "assets/batik-dyeing.jpg", "tall": true}, {"id": "w6", "title": "Cyclists of Jogja", "sub": "Street · Yogyakarta, 2021", "img": "assets/cyclists-jogja.jpg", "tall": false}, {"id": "w7", "title": "Hugo Boss — Product Study", "sub": "Product · Jakarta, 2024", "img": "assets/hugo-boss.jpg", "tall": false}, {"id": "w8", "title": "Jaysnack — Brand Photography", "sub": "Commercial · Jakarta, 2025", "img": "assets/jaysnack.jpg", "tall": false}, {"id": "w9", "title": "The Mesmerizing Gaze", "sub": "Portrait · Jakarta, 2024", "img": "assets/mesmerizing-gaze.jpg", "tall": true}, {"id": "w10", "title": "Confused", "sub": "Portrait · Jakarta, 2024", "img": "assets/confused.jpg", "tall": false}, {"id": "w11", "title": "Like a King", "sub": "Conceptual · Jakarta, 2026", "img": "assets/like-a-king.jpg", "tall": false}, {"id": "w12", "title": "Golden Hour — Jogja", "sub": "Street · Yogyakarta, 2025", "img": "assets/golden-hour.jpg", "tall": false}]}, {"id": "3d", "title": "3D Design", "works": [{"id": "w13", "title": "Dolphin Flask", "sub": "Product Design · 3D", "img": "assets/dolphin-flask.jpg", "tall": false}, {"id": "w14", "title": "Exhibition Stand — Type A", "sub": "Spatial Design · 3D", "img": "assets/stand-a.jpg", "tall": false}, {"id": "w15", "title": "Exhibition Stand — Type B", "sub": "Spatial Design · 3D", "img": "assets/stand-b.jpg", "tall": false}, {"id": "w16", "title": "Street Food Cart", "sub": "Product Design · 3D", "img": "assets/food-cart.jpg", "tall": false}, {"id": "w17", "title": "Sweet Potato Chips Packaging", "sub": "Packaging Design · 3D", "img": "assets/keripik-ubi.jpg", "tall": false}, {"id": "w18", "title": "Lampshade — Slatted", "sub": "Lighting Design · 3D", "img": "assets/lampshade.jpg", "tall": false}, {"id": "w19", "title": "Starling Cart", "sub": "Product Design · 3D", "img": "assets/starling-cart.jpg", "tall": false}, {"id": "w20", "title": "Wayang Rack", "sub": "Furniture Design · 3D", "img": "assets/rak-wayang.jpg", "tall": false}]}, {"id": "wood", "title": "Woodworking", "works": [{"id": "w21", "title": "Robot Statue — Mercubuana 40th", "sub": "Installation · 4.92 m, 2025", "img": "assets/robot-statue.jpg", "tall": false}, {"id": "w22", "title": "Open House Stage — Mercubuana", "sub": "Stage Design · 2025", "img": "assets/stage.jpg", "tall": false}, {"id": "w23", "title": "Open House Decor — Mercubuana", "sub": "Stage Design · 2025", "img": "assets/stage-decor.jpg", "tall": false}]}]}</script>
 <script>
-  // Filter
-  const buttons = document.querySelectorAll('.filters button');
-  const cards = document.querySelectorAll('.card');
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const f = btn.dataset.filter;
-      cards.forEach(c => {
-        const show = f === 'all' || c.dataset.cat === f;
-        c.style.display = show ? '' : 'none';
-      });
-    });
-  });
-
-  // Lightbox
-  const lb = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lb-img');
-  const lbTitle = document.getElementById('lb-title');
-  const lbSub = document.getElementById('lb-sub');
-  cards.forEach(c => {
-    c.addEventListener('click', () => {
-      lbImg.src = c.querySelector('img').src;
-      lbImg.alt = c.dataset.title;
-      lbTitle.textContent = c.dataset.title;
-      lbSub.textContent = c.dataset.sub;
-      lb.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-  lb.addEventListener('click', () => {
-    lb.classList.remove('open');
-    document.body.style.overflow = '';
-  });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { lb.classList.remove('open'); document.body.style.overflow = ''; }
-  });
+const $=s=>document.querySelector(s);let DATA,filter='all';
+const PF=window.PF={preview:{},get:()=>DATA,set(d){DATA=d;render()},
+ clean:d=>({sections:(d.sections||[]).map(s=>({id:String(s.id),title:String(s.title),works:(s.works||[]).filter(w=>/^assets\/[\w.\-]+$/.test(w.img)).map(w=>({id:String(w.id),title:String(w.title||''),sub:String(w.sub||''),img:w.img,tall:!!w.tall}))}))})};
+async function load(){try{const r=await fetch('data/works.json?v='+Date.now(),{cache:'no-store'});if(r.ok)return PF.clean(await r.json())}catch(e){}return PF.clean(JSON.parse($('#seed').textContent))}
+const lb=$('#lightbox'),close=()=>{lb.classList.remove('open');document.body.style.overflow=''};
+function openLb(src,w){$('#lb-img').src=src;$('#lb-img').alt=w.title;$('#lb-title').textContent=w.title;$('#lb-sub').textContent=w.sub;lb.classList.add('open');document.body.style.overflow='hidden'}
+function render(){
+ const f=$('#filters'),g=$('#grid');f.textContent='';g.textContent='';
+ const secs=DATA.sections.filter(s=>s.works.length);if(filter!=='all'&&!secs.some(s=>s.id===filter))filter='all';
+ [['all','All'],...secs.map(s=>[s.id,s.title])].forEach(([id,t])=>{const b=document.createElement('button');b.textContent=t;if(id===filter)b.className='active';b.onclick=()=>{filter=id;render()};f.append(b)});
+ secs.filter(s=>filter==='all'||s.id===filter).forEach(s=>s.works.forEach(w=>{
+  const c=document.createElement('div');c.className='card'+(w.tall?' tall':'');
+  const i=new Image();i.src=PF.preview[w.img]||w.img;i.alt=w.title;i.loading='lazy';
+  const n=document.createElement('div'),h=document.createElement('h3'),p=document.createElement('p');n.className='info';h.textContent=w.title;p.textContent=w.sub;n.append(h,p);c.append(i,n);
+  c.onclick=()=>openLb(i.src,w);g.append(c)}))}
+lb.onclick=close;addEventListener('keydown',e=>e.key==='Escape'&&close());
+// Owner editor (kode editor hanya dimuat jika #owner dibuka atau token tersimpan di perangkat ini)
+function owner(){if(window.PF_OWNER)return window.PF_OWNER();const s=document.createElement('script');s.src='owner.js';document.body.append(s)}
+addEventListener('hashchange',()=>location.hash==='#owner'&&owner());
+load().then(d=>{DATA=d;render();
+ if(location.hash==='#owner')owner();
+ else if(localStorage.pf_t||sessionStorage.pf_t){const b=document.createElement('button');b.className='owner-pill';b.textContent='✎ Edit';b.onclick=owner;document.body.append(b)}});
 </script>
 
 </body>
