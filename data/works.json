@@ -7,56 +7,119 @@
         {
           "id": "w1",
           "title": "Together We Reach",
-          "sub": "Documentary · Bogor, 2021",
+          "sub": "Potrait · Bogor, 2021",
           "img": "assets/together-we-reach.jpg",
           "tall": true
         },
         {
           "id": "w2",
           "title": "Solitary",
-          "sub": "Fine Art · Bogor, 2021",
+          "sub": "Potrait · Bogor, 2021",
           "img": "assets/solitary.jpg",
           "tall": false
         },
         {
-          "id": "w3",
-          "title": "Enjoying the Steel Horse",
-          "sub": "Street · Jakarta, 2021",
-          "img": "assets/steel-horse.jpg",
+          "id": "4gas0a5",
+          "title": "Full House",
+          "sub": "Potrait · Bogor, 2021",
+          "img": "assets/60-oer2uvl.jpg",
           "tall": false
         },
         {
+          "id": "hfj2ocb",
+          "title": "Happy",
+          "sub": "Potrait · Bogor, 2021",
+          "img": "assets/56-50vcarr.jpg",
+          "tall": false
+        },
+        {
+          "id": "84ik2m6",
+          "title": "Stone Worker",
+          "sub": "Potrait · Bogor, 2021",
+          "img": "assets/36-qgi56du.jpg",
+          "tall": true
+        },
+        {
           "id": "w4",
-          "title": "Batik Komar — The Process",
-          "sub": "Craft · Bandung, 2023",
+          "title": "The Process",
+          "sub": "Batik Komar · Bandung, 2023",
           "img": "assets/batik-process.jpg",
           "tall": false
         },
         {
           "id": "w5",
-          "title": "Batik Komar — Dyeing",
-          "sub": "Craft · Bandung, 2023",
+          "title": "Dyeing",
+          "sub": "Batik Komar · Bandung, 2023",
           "img": "assets/batik-dyeing.jpg",
           "tall": true
         },
         {
-          "id": "w6",
-          "title": "Cyclists of Jogja",
-          "sub": "Street · Yogyakarta, 2021",
-          "img": "assets/cyclists-jogja.jpg",
-          "tall": false
+          "id": "f6omgbz",
+          "title": "Batik Stamp",
+          "sub": "Batik Komar · Bandung, 2023",
+          "img": "assets/10-41tm7hs.jpg",
+          "tall": true
+        },
+        {
+          "id": "ifeptqm",
+          "title": "Pattern Making",
+          "sub": "Batik Komar · Bandung, 2023",
+          "img": "assets/8-ov7e1v7.jpg",
+          "tall": true
+        },
+        {
+          "id": "b7m4nhn",
+          "title": "Canting",
+          "sub": "Batik Komar · Bandung, 2023",
+          "img": "assets/5-d7mopev.jpg",
+          "tall": true
+        },
+        {
+          "id": "l57v3eq",
+          "title": "Stampping",
+          "sub": "Batik Komar · Bandung, 2023",
+          "img": "assets/6-rg67hfx.jpg",
+          "tall": true
+        },
+        {
+          "id": "wf4diie",
+          "title": "Muse 1",
+          "sub": "Portrait · Jakarta, 2025",
+          "img": "assets/hasil-1-hkxfeow.jpg",
+          "tall": true
+        },
+        {
+          "id": "ys9wcg5",
+          "title": "Muse 2",
+          "sub": "Portrait · Jakarta, 2024",
+          "img": "assets/hasil-2-cz2rtxs.jpg",
+          "tall": true
+        },
+        {
+          "id": "xhh8dce",
+          "title": "Muse 3",
+          "sub": "Portrait · Jakarta, 2024",
+          "img": "assets/hasil-3-2ckhl6x.jpg",
+          "tall": true
+        },
+        {
+          "id": "f6bo2st",
+          "title": "Muse 4",
+          "sub": "Portrait · Jakarta, 2024",
+          "img": "assets/hasil-4-s9nq18y.jpg",
+          "tall": true
         },
         {
           "id": "w7",
-          "title": "Hugo Boss — Product Study",
-          "sub": "Product · Jakarta, 2024",
+          "title": "Hugo Boss ",
+          "sub": "Brand Photograpy · Jakarta, 2024",
           "img": "assets/hugo-boss.jpg",
           "tall": false
         },
         {
           "id": "w8",
-          "title": "Jaysnack — Brand Photography",
-          "sub": "Commercial · Jakarta, 2025",
+          "title": "Jaysnack",
+          "sub": "Brand Photography · Jakarta, 2025",
           "img": "assets/jaysnack.jpg",
           "tall": false
         },
@@ -70,16 +133,51 @@
         {
           "id": "w11",
           "title": "Like a King",
-          "sub": "Conceptual · Jakarta, 2026",
+          "sub": "Potrait · Jakarta, 2025",
           "img": "assets/like-a-king.jpg",
           "tall": false
         },
         {
           "id": "w12",
-          "title": "Golden Hour — Jogja",
+          "title": "Golden Hour ",
           "sub": "Street · Yogyakarta, 2025",
           "img": "assets/golden-hour.jpg",
           "tall": false
+        },
+        {
+          "id": "g0r0eld",
+          "title": "Mas Bob Preparation",
+          "sub": "Street · Yogyakarta, 2025",
+          "img": "assets/img-9399-dju4vug.jpg",
+          "tall": true
+        },
+        {
+          "id": "ughhvfg",
+          "title": "Smoking Rio",
+          "sub": "Potrait · Yogyakarta, 2025",
+          "img": "assets/img-9460-22682lv.jpg",
+          "tall": true
+        },
+        {
+          "id": "ry07h1p",
+          "title": "Mas Bob Preparation 2",
+          "sub": "Street · Yogyakarta, 2025",
+          "img": "assets/img-9390-1s6zz4r.jpg",
+          "tall": true
+        },
+        {
+          "id": "xb2gzoz",
+          "title": "Art of Mas Bob",
+          "sub": "Street · Yogyakarta, 2025",
+          "img": "assets/img-9509-ic2wxvh.jpg",
+          "tall": true
+        },
+        {
+          "id": "j2jc5vu",
+          "title": "Performance Art of Mas Bob",
+          "sub": "Street · Yogyakarta, 2025",
+          "img": "assets/img-9597-50n5dp4.jpg",
+          "tall": true
         }
       ]
     },
@@ -95,31 +193,10 @@
           "tall": false
         },
         {
-          "id": "w14",
-          "title": "Exhibition Stand — Type A",
-          "sub": "Spatial Design · 3D",
-          "img": "assets/stand-a.jpg",
-          "tall": false
-        },
-        {
-          "id": "w15",
-          "title": "Exhibition Stand — Type B",
-          "sub": "Spatial Design · 3D",
-          "img": "assets/stand-b.jpg",
-          "tall": false
-        },
-        {
           "id": "w16",
           "title": "Street Food Cart",
           "sub": "Product Design · 3D",
           "img": "assets/food-cart.jpg",
-          "tall": false
-        },
-        {
-          "id": "w17",
-          "title": "Sweet Potato Chips Packaging",
-          "sub": "Packaging Design · 3D",
-          "img": "assets/keripik-ubi.jpg",
           "tall": false
         },
         {
@@ -141,6 +218,69 @@
           "title": "Wayang Rack",
           "sub": "Furniture Design · 3D",
           "img": "assets/rak-wayang.jpg",
+          "tall": false
+        },
+        {
+          "id": "b6hue4f",
+          "title": "Gobo Filter Projector",
+          "sub": "Product Design · 3D",
+          "img": "assets/render-1-89hjba8.jpg",
+          "tall": false
+        },
+        {
+          "id": "6dkobh0",
+          "title": "Gobo Filter Projector 2",
+          "sub": "Product Design · 3D",
+          "img": "assets/render-2-935znrg.jpg",
+          "tall": false
+        },
+        {
+          "id": "sv85tg7",
+          "title": "Gobo Filter Projector 3",
+          "sub": "Product Design · 3D",
+          "img": "assets/render-3-726lyjf.jpg",
+          "tall": false
+        },
+        {
+          "id": "3qa453m",
+          "title": "Gobo Filter Projector 4",
+          "sub": "Product Design · 3D",
+          "img": "assets/render-4-o1kq6xw.jpg",
+          "tall": false
+        },
+        {
+          "id": "6rtlnv4",
+          "title": "Gobo Filter Projector 5",
+          "sub": "Product Design · 3D",
+          "img": "assets/render-5-wftnter.jpg",
+          "tall": false
+        },
+        {
+          "id": "aexaktu",
+          "title": "Gobo Filter Projector 6",
+          "sub": "Product Design · 3D",
+          "img": "assets/render-6-no0k1wv.jpg",
+          "tall": false
+        },
+        {
+          "id": "7u6bx62",
+          "title": "Exploded Gobo Filter Projector",
+          "sub": "Product Design · 3D",
+          "img": "assets/exploded-render-final-1u7j3xg.jpg",
+          "tall": false
+        },
+        {
+          "id": "cbc5hih",
+          "title": "Exploded Gobo Filter Projector 2",
+          "sub": "Product Design · 3D",
+          "img": "assets/exploded-render-final-2-a5912y1.jpg",
+          "tall": false
+        },
+        {
+          "id": "wh8bqi8",
+          "title": "Exploded Gobo Filter Projector 3",
+          "sub": "Product Design · 3D",
+          "img": "assets/exploded-render-final-3-ijpg2lk.jpg",
           "tall": false
         }
       ]
