@@ -5,170 +5,200 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MUHAMMAD WIDI ASSIDDIQY — Photographer & Designer</title>
 <meta name="description" content="Portfolio of MUHAMMAD WIDI ASSIDDIQY — Photographer, 3D Designer and Woodworker based in Tangerang, Indonesia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#fafaf7;
-    --ink:#161613;
-    --muted:#7a7a72;
-    --line:#e4e4dc;
-    --accent:#161613;
+    --bg:#fff;
+    --ink:#000;
+    --muted:#6f6f6f;
+    --line:#e4e4e4;
+    --sans:"Archivo","Helvetica Neue",Helvetica,Arial,sans-serif;
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{
     background:var(--bg);
     color:var(--ink);
-    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family:var(--sans);
+    font-weight:400;
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
   img{display:block;width:100%;height:100%;object-fit:cover}
   a{color:inherit;text-decoration:none}
+  a:focus-visible,button:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none!important}
+  }
 
-  /* ---------- Header ---------- */
+  /* ---------- Header: hitam di atas area gelap, putih di atas area terang ---------- */
   header{
     position:fixed;top:0;left:0;right:0;z-index:100;
     display:flex;justify-content:space-between;align-items:center;
-    padding:1.4rem 4vw;
-    background:rgba(250,250,247,.85);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid var(--line);
+    padding:1.3rem 4vw;
+    background:#000;color:#fff;border-bottom:1px solid #000;
+    transition:background .3s,color .3s,border-color .3s;
   }
-  .logo{font-weight:700;letter-spacing:.14em;font-size:.85rem;text-transform:uppercase}
-  nav{display:flex;gap:2.2rem}
-  nav a{
-    font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);
-    transition:color .25s;
-  }
-  nav a:hover{color:var(--ink)}
-  @media(max-width:640px){nav a:not(:last-child){display:none}}
+  header.on-light{background:#fff;color:#000;border-bottom-color:var(--line)}
+  .logo{font-weight:700;letter-spacing:.14em;font-size:.9rem;text-transform:uppercase}
+  .menu-btn{background:none;border:0;cursor:pointer;color:inherit;padding:.6rem .2rem .6rem .8rem;display:flex;flex-direction:column;gap:6px}
+  .menu-btn span{display:block;width:26px;height:1.5px;background:currentColor}
+  @media(max-width:640px){.logo{font-size:.8rem;letter-spacing:.12em}}
 
-  /* ---------- Hero ---------- */
+  /* ---------- Full-screen menu ---------- */
+  .menu{
+    position:fixed;inset:0;z-index:300;background:#000;color:#fff;
+    display:flex;flex-direction:column;justify-content:center;align-items:center;
+    visibility:hidden;opacity:0;transition:opacity .35s,visibility .35s;
+    font-family:var(--sans);
+  }
+  .menu.open{visibility:visible;opacity:1}
+  .menu button,.menu a{font-family:inherit;color:#fff}
+  .menu-close{position:absolute;top:1.1rem;right:1.4rem;background:none;border:0;cursor:pointer;padding:.5rem;line-height:0}
+  .menu-list{list-style:none;text-align:center;max-height:68vh;overflow-y:auto;padding:0 4vw;scrollbar-width:none}
+  .menu-list::-webkit-scrollbar{display:none}
+  .menu-list button,.menu-list a{
+    display:inline-block;background:none;border:0;cursor:pointer;
+    font-weight:700;text-transform:uppercase;
+    font-size:clamp(1.9rem,2.7vw,3rem);line-height:1.45;letter-spacing:.005em;
+    transition:opacity .25s;
+  }
+  .menu-list:hover > li > *{opacity:.38}
+  .menu-list > li > *:hover,.menu-list > li > *:focus-visible{opacity:1}
+  .menu a:focus-visible,.menu button:focus-visible{outline:2px solid #fff;outline-offset:4px}
+  .menu-preview{
+    position:absolute;right:9vw;top:50%;transform:translateY(-50%);
+    width:clamp(120px,12vw,230px);aspect-ratio:4/5;overflow:hidden;
+    opacity:0;transition:opacity .3s;pointer-events:none;background:#111;
+  }
+  .menu-preview.show{opacity:1}
+  .menu-foot{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.7rem 4vw}
+  .menu-foot a{font-size:.9rem;letter-spacing:.05em;text-transform:uppercase}
+  @media(max-width:900px){.menu-preview{display:none}}
+
+  /* ---------- Hero: panel hitam, foto menempel ke tepi ---------- */
   .hero{
     min-height:100vh;
     display:grid;
-    grid-template-columns:1.2fr 1fr;
-    align-items:center;
-    gap:4vw;
-    padding:8rem 4vw 4rem;
+    grid-template-columns:1fr 1fr;
+    background:#000;color:#fff;
+  }
+  .hero > div:first-child{
+    display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;
+    padding:9rem 5vw 5rem 4vw;
   }
   .hero h1{
-    font-size:clamp(2.6rem,6vw,5.2rem);
-    line-height:1.05;
+    font-size:clamp(2.6rem,5.8vw,5.4rem);
+    line-height:1;
     font-weight:700;
-    letter-spacing:-.02em;
+    letter-spacing:-.01em;
+    text-transform:uppercase;
   }
-  .hero h1 span{display:block;color:var(--muted);font-weight:400}
-  .hero p{
-    max-width:34ch;margin-top:1.6rem;color:var(--muted);font-size:1.05rem;
+  .hero h1 span{
+    display:block;margin-top:1.5rem;
+    font-size:clamp(.8rem,1.1vw,.95rem);font-weight:500;
+    letter-spacing:.16em;color:#9a9a9a;
   }
+  .hero p{max-width:40ch;margin-top:1.8rem;color:#bdbdbd;font-size:1rem}
   .hero-cta{
-    display:inline-block;margin-top:2.2rem;
-    padding:.85rem 2.2rem;
-    border:1px solid var(--ink);
-    font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;
+    display:inline-block;margin-top:2.4rem;
+    padding:.95rem 2.2rem;
+    border:1px solid #fff;
+    font-size:.8rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
     transition:background .25s,color .25s;
   }
-  .hero-cta:hover{background:var(--ink);color:var(--bg)}
+  .hero-cta:hover{background:#fff;color:#000}
   .hero-img{
-    aspect-ratio:4/5;
-    max-height:70vh;
+    position:relative;
+    min-height:100vh;
     overflow:hidden;
     filter:grayscale(1) contrast(1.05);
   }
+  .hero-img img{position:absolute;inset:0}
   @media(max-width:820px){
-    .hero{grid-template-columns:1fr;min-height:auto;padding-top:7rem}
-    .hero-img{max-height:55vh}
+    .hero{grid-template-columns:1fr;min-height:auto}
+    .hero > div:first-child{padding:7rem 4vw 3rem}
+    .hero-img{min-height:0;aspect-ratio:4/5}
   }
 
-  /* ---------- Section shell ---------- */
-  section{padding:6rem 4vw;border-top:1px solid var(--line)}
-  .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3rem;flex-wrap:wrap;gap:1rem}
-  .sec-head h2{font-size:.85rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
-  .sec-head .num{font-size:.85rem;letter-spacing:.28em;color:var(--muted)}
+  /* ---------- Section ---------- */
+  section{padding:7rem 4vw 6rem}
+  .sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:3.5rem;flex-wrap:wrap;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:1.2rem}
+  .sec-head h2{font-weight:700;font-size:clamp(1.5rem,2.8vw,2.4rem);letter-spacing:.01em;line-height:1.1;text-transform:uppercase;color:var(--ink)}
+  .sec-head .num{font-size:.85rem;font-weight:500;letter-spacing:.14em;color:var(--muted)}
 
   /* ---------- About ---------- */
-  .about{display:grid;grid-template-columns:1fr 1.6fr;gap:4vw;align-items:start}
-  .about p{font-size:1.35rem;line-height:1.5;max-width:44ch}
-  .about .meta{margin-top:2.4rem;display:grid;gap:.9rem}
-  .about .meta div{display:flex;justify-content:space-between;max-width:420px;border-bottom:1px solid var(--line);padding-bottom:.6rem}
-  .about .meta dt{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
-  .about .meta dd{font-size:.9rem}
-  @media(max-width:820px){.about{grid-template-columns:1fr}}
+  .about{display:grid;grid-template-columns:1fr 1.3fr;gap:6vw;align-items:start}
+  .about p{font-size:clamp(1.3rem,2.2vw,1.9rem);line-height:1.4;max-width:32ch;font-weight:500}
+  .about .meta{display:grid;gap:0}
+  .about .meta div{display:flex;justify-content:space-between;gap:2rem;border-bottom:1px solid var(--line);padding:1.05rem 0}
+  .about .meta div:first-child{border-top:1px solid var(--line)}
+  .about .meta dt{font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-top:.2rem}
+  .about .meta dd{font-size:.95rem;text-align:right}
+  @media(max-width:820px){.about{grid-template-columns:1fr}.about .meta dd{text-align:left}}
 
   /* ---------- Filters ---------- */
-  .filters{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:2.6rem}
+  .filters{display:flex;gap:2rem;flex-wrap:wrap;margin-bottom:3rem}
   .filters button{
-    background:none;border:1px solid var(--line);color:var(--muted);
-    padding:.55rem 1.3rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;
-    cursor:pointer;border-radius:999px;transition:all .25s;font-family:inherit;
+    background:none;border:0;border-bottom:1px solid transparent;color:var(--muted);
+    padding:.2rem 0;font-size:.78rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;
+    cursor:pointer;transition:color .25s,border-color .25s;font-family:inherit;
   }
-  .filters button.active,.filters button:hover{border-color:var(--ink);color:var(--ink)}
-  .filters button.active{background:var(--ink);color:var(--bg)}
+  .filters button:hover{color:var(--ink)}
+  .filters button.active{color:var(--ink);border-bottom-color:var(--ink)}
 
-  /* ---------- Grid ---------- */
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:2px;
-    background:var(--line);
-  }
-  .card{
-    position:relative;overflow:hidden;cursor:pointer;
-    background:var(--bg);
-    aspect-ratio:4/3;
-  }
-  .card.tall{grid-row:span 2;aspect-ratio:auto}
+  /* ---------- Grid: katalog, caption di bawah gambar ---------- */
+  .grid{column-count:3;column-gap:1.6rem}
+  .card{cursor:pointer;background:none;position:relative;break-inside:avoid;margin-bottom:3.5rem}
   .card img{
-    transition:transform .8s cubic-bezier(.19,1,.22,1),filter .5s;
+    height:auto;aspect-ratio:4/3;
+    background:#eee;
+    transition:opacity .4s;
   }
-  .card:hover img{transform:scale(1.045)}
-  .card .info{
-    position:absolute;left:0;right:0;bottom:0;
-    padding:1.2rem 1.4rem;
-    background:linear-gradient(to top,rgba(0,0,0,.72),transparent);
-    color:#fff;
-    opacity:0;transform:translateY(8px);
-    transition:opacity .4s,transform .4s;
-    pointer-events:none;
-  }
-  .card:hover .info{opacity:1;transform:translateY(0)}
-  .card .info h3{font-size:.95rem;font-weight:600;letter-spacing:.02em}
-  .card .info p{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75;margin-top:.2rem}
-  @media(max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:560px){.grid{grid-template-columns:1fr}.card.tall{grid-row:auto;aspect-ratio:4/3}}
+  .card.tall img{aspect-ratio:3/4}
+  .card:hover img{opacity:.86}
+  .card.pick img{outline:2px solid var(--ink);outline-offset:6px}
+  .card .info{padding:1rem 0 0}
+  .card .info h3{font-size:.88rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;line-height:1.35;color:var(--ink)}
+  .card .info p{font-size:.8rem;letter-spacing:.02em;color:var(--muted);margin-top:.3rem}
+  @media(max-width:960px){.grid{column-count:2}}
+  @media(max-width:560px){.grid{column-count:1}}
 
   /* ---------- Lightbox ---------- */
   .lightbox{
     position:fixed;inset:0;z-index:200;
-    background:rgba(12,12,10,.94);
+    background:rgba(0,0,0,.96);
     display:none;align-items:center;justify-content:center;
     padding:4vw;cursor:zoom-out;
   }
   .lightbox.open{display:flex}
   .lightbox figure{max-width:88vw;max-height:86vh}
-  .lightbox img{max-width:88vw;max-height:78vh;object-fit:contain}
-  .lightbox figcaption{color:#ccc;margin-top:1rem;font-size:.85rem;letter-spacing:.06em;display:flex;justify-content:space-between;gap:1rem}
-  .lightbox figcaption span:last-child{opacity:.6}
+  .lightbox img{max-width:88vw;max-height:78vh;width:auto;height:auto;margin:0 auto;object-fit:contain}
+  .lightbox figcaption{color:#fff;margin-top:1rem;font-size:.85rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;display:flex;justify-content:space-between;gap:1rem}
+  .lightbox figcaption span:last-child{font-weight:400;text-transform:none;letter-spacing:.02em;opacity:.6}
 
-  /* ---------- Contact ---------- */
-  .contact{text-align:center;padding-bottom:8rem}
-  .contact h2{font-size:clamp(2.2rem,5.5vw,4.4rem);line-height:1.08;letter-spacing:-.02em}
-  .contact h2 em{font-style:normal;color:var(--muted)}
-  .contact-links{
-    margin-top:3rem;display:flex;justify-content:center;gap:2.4rem;flex-wrap:wrap;
-  }
+  /* ---------- Contact: kembali ke hitam seperti menu ---------- */
+  .contact{text-align:center;padding-bottom:9rem;background:#000;color:#fff}
+  .contact .sec-head{text-align:center;border-bottom-color:#2a2a2a}
+  .contact .sec-head h2{color:#fff}
+  .contact .sec-head .num{color:#8a8a8a}
+  .contact > h2{font-weight:700;font-size:clamp(2.2rem,5.4vw,4.6rem);line-height:1.02;letter-spacing:-.01em;text-transform:uppercase}
+  .contact > h2 em{font-style:normal;color:#8a8a8a}
+  .contact-links{margin-top:3.2rem;display:flex;justify-content:center;gap:2.8rem;flex-wrap:wrap}
   .contact-links a{
-    font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;
-    border-bottom:1px solid var(--ink);padding-bottom:.25rem;
+    font-size:.8rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;
+    border-bottom:1px solid #fff;padding-bottom:.25rem;
     transition:opacity .25s;
   }
-  .contact-links a:hover{opacity:.45}
+  .contact-links a:hover{opacity:.5}
 
   footer{
-    display:flex;justify-content:space-between;flex-wrap:gap;gap:1rem;
-    padding:1.6rem 4vw;border-top:1px solid var(--line);
-    font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+    padding:1.6rem 4vw;border-top:1px solid #222;background:#000;
+    font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#8a8a8a;
   }
   .owner-pill{position:fixed;right:14px;bottom:14px;z-index:150;background:#161613;color:#fafaf7;border:0;padding:.55rem 1rem;font:inherit;font-size:.75rem;letter-spacing:.14em;cursor:pointer}
 </style>
@@ -177,12 +207,22 @@
 
 <header>
   <a class="logo" href="#top">Widi Assiddiqy</a>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#works">Works</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <button class="menu-btn" id="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
 </header>
+
+<!-- FULL-SCREEN MENU (diisi otomatis dari data karya) -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Main menu">
+  <button class="menu-close" id="menu-close" type="button" aria-label="Close menu">
+    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="#fff" stroke-width="1.5"><path d="M2 2l18 18M20 2L2 20"/></svg>
+  </button>
+  <ul class="menu-list" id="menu-list"></ul>
+  <div class="menu-preview" id="menu-preview" aria-hidden="true"><img alt=""></div>
+  <div class="menu-foot">
+    <a href="mailto:aassiddiqy.widi@gmail.com">Email</a>
+    <a href="https://instagram.com/wiidii.a" target="_blank" rel="noopener">Instagram</a>
+    <a href="tel:+6285155136911">WhatsApp / Phone</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <div class="hero" id="top">
@@ -268,6 +308,60 @@ addEventListener('hashchange',()=>location.hash==='#owner'&&owner());
 load().then(d=>{DATA=d;render();
  if(location.hash==='#owner')owner();
  else if(localStorage.pf_t||sessionStorage.pf_t){const b=document.createElement('button');b.className='owner-pill';b.textContent='✎ Edit';b.onclick=owner;document.body.append(b)}});
+</script>
+<script>
+(function(){
+ const menu=document.getElementById('menu'),list=document.getElementById('menu-list'),
+  btn=document.getElementById('menu-btn'),xbtn=document.getElementById('menu-close'),prev=document.getElementById('menu-preview'),pimg=prev.querySelector('img');
+ const secs=()=>{try{return((window.PF&&PF.get())||{sections:[]}).sections.filter(s=>s.works.length)}catch(e){return[]}};
+ const src=w=>(PF.preview&&PF.preview[w.img])||w.img;
+ const showPrev=u=>{if(u){pimg.src=u;prev.classList.add('show')}else prev.classList.remove('show')};
+ function row(label,fn,href,pv){
+  const li=document.createElement('li'),el=document.createElement(href?'a':'button');
+  if(href)el.href=href;else el.type='button';
+  el.textContent=label;el.addEventListener('click',fn);
+  const sp=()=>showPrev(pv||null);el.addEventListener('mouseenter',sp);el.addEventListener('focus',sp);
+  li.append(el);list.append(li);return el}
+ function open(){main();menu.classList.add('open');btn.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';xbtn.focus()}
+ function shut(){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';showPrev(null);btn.focus()}
+ function main(){
+  list.textContent='';list.className='menu-list';showPrev(null);
+  row('About',shut,'#about');
+  secs().forEach(s=>row(s.title,()=>go(s),null,src(s.works[0])));
+  row('Contact',shut,'#contact');
+ }
+ function go(s,w){
+  menu.classList.remove('open');btn.setAttribute('aria-expanded','false');document.body.style.overflow='';showPrev(null);
+  if(w){
+   /* karya dipilih: tampilkan semua karya, lalu geser ke karya itu (tanpa membuka lightbox) */
+   filter='all';render();
+   const i=secs().flatMap(x=>x.works).findIndex(x=>x.id===w.id),c=document.querySelectorAll('#grid .card')[i];
+   if(c){c.scrollIntoView({block:'center'});c.classList.add('pick');setTimeout(()=>c.classList.remove('pick'),2600)}
+  }else{
+   /* kategori dipilih: langsung tampilkan seluruh karya kategori itu; tab "All" di atas galeri untuk kembali */
+   filter=s.id;render();document.getElementById('works').scrollIntoView();
+  }
+ }
+ list.addEventListener('mouseleave',()=>showPrev(null));
+ btn.addEventListener('click',open);xbtn.addEventListener('click',shut);
+ addEventListener('keydown',e=>{
+  if(!menu.classList.contains('open'))return;
+  if(e.key==='Escape')shut();
+  if(e.key==='Tab'){
+   const f=[...menu.querySelectorAll('button:not([hidden]),a[href]')];if(!f.length)return;
+   const a=f[0],z=f[f.length-1];
+   if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus()}
+   else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus()}
+  }
+ });
+})();
+</script>
+<script>
+(function(){
+ const h=document.querySelector('header'),dark=[...document.querySelectorAll('.hero,.contact,footer')];
+ function tone(){const y=h.offsetHeight/2;h.classList.toggle('on-light',!dark.some(e=>{const r=e.getBoundingClientRect();return r.top<=y&&r.bottom>y}))}
+ addEventListener('scroll',tone,{passive:true});addEventListener('resize',tone);tone();
+})();
 </script>
 
 </body>
